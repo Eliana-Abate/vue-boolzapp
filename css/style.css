@@ -54,7 +54,8 @@ main {
     color: #8edafc;
 }
 
-.search-bar-bg {
+.search-section{
+    height: 54px;
     background-color: #f5f6f6;
 }
 
@@ -70,7 +71,7 @@ main {
 }
 
 .contacts-list {
-    height: 400px;
+    height: 380px;
     overflow-y: scroll;
 }
 
@@ -84,7 +85,7 @@ main {
 }
 
 .open-chat {
-    height: calc(100% - 60px);
+    height: 440px;
     background-image: url(../img/mine.jpg); 
     overflow-y: scroll;
 }
