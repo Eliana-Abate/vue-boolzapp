@@ -28,7 +28,7 @@
 
                     <div class="col-6 d-flex align-items-center">
                         <div class="row align-items-center">
-                            <h6 class="ms-3 profile-name"> {{user.name}}</h6>
+                            <h6 class="ms-4 profile-name"> {{user.name}}</h6>
                         </div> 
                     </div>
 
@@ -87,8 +87,8 @@
 
                     <div class="col-11 d-flex align-items-center">
                         <div class="row jalign-items-center">
-                            <h6 class="ms-3 alert-title">Ricevi notifiche di nuovi messaggi</h6>
-                            <p class="ms-3 alert-subtitle">Attiva notifiche desktop</p>  
+                            <h6 class="ms-4 alert-title">Ricevi notifiche di nuovi messaggi</h6>
+                            <p class="ms-4 alert-subtitle">Attiva notifiche desktop</p>  
                         </div> 
                     </div>
 
@@ -105,46 +105,24 @@
                 </section>
 
                 <!--* CONTACTS LIST-->
-                <section class="contacts-list row p-2 bg-white">
-                    <!--<ul v-for = '(item, index) in contacts'>
-                            <li class="py-2">
-                                <div class="col-6 d-flex align-items-center">
-                                    <img src="./img/avatar{{item.avatar}}.jpg" alt="{{item.avatar}}" class="profile-style">
-                                    <span class="profile-name"> {{item.name}}</span>
-                                </div>
-                            </li>
-                        </ul> -->
-                    <ul>
-                        <li>
-                            <div class="col-6 d-flex align-items-center">
-                                <img src="./img/avatar_1.jpg" alt="" class="profile-style">
-                                <span class="profile-name"> Michele</span>
-                            </div>
-                        </li>
+                <section class="contacts-list row bg-white">
 
-                        <li>
-                            <div class="col-6 d-flex align-items-center">
-                                <img src="./img/avatar_2.jpg" alt="" class="profile-style">
-                                <span class="profile-name"> Fabio</span>
+                    <section class="col">
+                        <div class="row single-chat" v-for = '(item, index) in contacts'>
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <!--TODO: RISOLVERE COLLEGAMENTO IMG CON JS-->
+                                <img src="./img/avatar_1.jpg" alt="" class="profile-style"> 
                             </div>
-                        </li>
-
-                        <li>
-                            <div class="col-6 d-flex align-items-center">
-                                <img src="./img/avatar_3.jpg" alt="" class="profile-style">
-                                <span class="profile-name"> Samuele</span>
+                
+                            <div class="col-11 d-flex align-items-center">
+                                <div class="row pb-3 ps-2 align-items-start">
+                                    <h6 class="profile-name"> {{item.name}}</h6>
+                                </div> 
                             </div>
-                        </li>
-
-                        <li>
-                            <div class="col-6 d-flex align-items-center">
-                                <img src="./img/avatar_4.jpg" alt="" class="profile-style">
-                                <span class="profile-name"> Luisa</span>
-                            </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </section>
+                   
                 </section>
-
             </div>
     
 
