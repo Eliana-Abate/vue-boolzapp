@@ -3,9 +3,17 @@ body {
     background: linear-gradient(#128C7E 20%, #ECE5DD 20%, #d2dbdb);
 }
 
+.fas, .far {
+    font-size: 25px;
+}
+
 .bg-header {
     background-color: #eaeaea;
     color: #b1b1b1;
+}
+
+main {
+    height: 500px;
 }
 
 .profile-style {
@@ -29,6 +37,54 @@ body {
     background-color: white;
     color: #8edafc;
 }
+
+.search-bar-bg {
+    background-color: #f5f6f6;
+}
+
+.search-bar-style {
+    background-color: white;
+    border: transparent;
+    color: #b1b1b1;
+    font-size: 15px;
+}
+
+.search-bar-style .fas {
+    font-size: 15px;
+}
+
+.contacts-list {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.contacts-list ul li {
+    list-style-type: none;
+}
+
+
+.contacts-list ul li:hover {
+    background-color: #eaeaea;
+}
+
+.open-chat {
+    height: calc(100% - 60px);
+    background-image: url(../img/mine.jpg); 
+    overflow-y: scroll;
+}
+
+.chat-footer {
+    height: 60px;
+    background-color: #f3eeea;
+    color: gray;
+}
+
+.typing-bar {
+    background-color: white;
+    border: transparent;
+    color: #b1b1b1;
+}
+
 
 
 
