@@ -20,14 +20,19 @@
             <!--! LEFT COLUMN: USER PROFILE-->
             <div class="col-5">
 
-                <!--* USER -->
+                <!--* USER PROFILE -->
                 <section class="row p-2 bg-header">
-                    <div class="col-6 d-flex align-items-center">
+                    <div class="col-1 d-flex align-items-center">
                         <img src="./img/avatar_io.jpg" alt="" class="profile-style">
-                        <span class="profile-name"> {{user.name}}</span>
                     </div>
 
-                    <div class="col-6 d-flex align-items-center justify-content-end">
+                    <div class="col-6 d-flex align-items-center">
+                        <div class="row align-items-center">
+                            <h6 class="ms-3 profile-name"> {{user.name}}</h6>
+                        </div> 
+                    </div>
+
+                    <div class="col-5 d-flex align-items-center justify-content-end">
                         <i class="fas fa-circle-notch px-2"></i>
                         <i class="fas fa-comment-alt px-2"></i>
                         <i class="fas fa-ellipsis-v px-2"></i>
@@ -42,7 +47,7 @@
            
                 <!--* CURRENT CONTACT -->
                 <section class="row p-2 bg-header">
-                    <div class="col-1 d-flex align-items-center">
+                    <div class="col-1 d-flex justify-content-center align-items-center">
                         <img src="./img/avatar_1.jpg" alt="" class="profile-style">
                     </div>
 
@@ -62,6 +67,7 @@
 
             </div> 
         </header>
+
 
 
     <!------------------------ MAIN --------------------------->
