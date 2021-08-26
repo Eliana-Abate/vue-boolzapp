@@ -73,6 +73,20 @@ main {
     overflow-y: scroll;
 }
 
+.user-message {
+    width: 70%;
+    border-radius: 8px;
+    background-color: #DCF8C6;
+    padding: 8px 12px;
+}
+
+.current-contact-message {
+    width: 70%;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px 12px;
+}
+
 .chat-footer {
     height: 60px;
     background-color: #f3eeea;
