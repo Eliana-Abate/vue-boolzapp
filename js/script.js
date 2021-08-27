@@ -17,6 +17,10 @@ const root = new Vue ({
             return (status === 'received') ? 'justify-content-start' : 'justify-content-end';
         },
 
+        isContactMessage(status) {
+            return (status === 'received') ? 'current-contact-message' : 'user-message';
+        },
+
         selectedChat(i) {
             this.currentIndex = i; 
         },
