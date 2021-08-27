@@ -8,7 +8,7 @@ const root = new Vue ({
     data: {
         user: user,
         contacts: contacts,
-
+        data: data,
     },
 
     methods: {
