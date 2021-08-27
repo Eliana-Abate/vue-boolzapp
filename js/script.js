@@ -7,11 +7,7 @@ const root = new Vue ({
 
     data: {
         currentIndex: 0,
-        newUserMessage: {
-            date: '27/08/2021 17:05:29',
-            message: '',
-            status: 'sent',
-        },
+        newText: '',
         user: data.user,
         contacts: data.contacts,
     
@@ -32,14 +28,17 @@ const root = new Vue ({
         },
 
         addUserMessage() {
-            let words = this.newUserMessage.message;
+            let newUserMessage = {
+                date: '27/08/2021 17:05:29',
+                message: this.newText,
+                status: 'sent',
+            };
 
-            if (words && words.trim() !== '') {
-                this.newUserMessage.push(words);
-                this.contacts.messages.push(newUserMessage);
+            if (this.newText && this.newText.trim() !== '') {
+                this.contacts[this.currentIndex].messages.push(newUserMessage);
             } 
-            
-            this.newUserMessage.message = '';
+
+            this.newText = '';
         }
 
     },
