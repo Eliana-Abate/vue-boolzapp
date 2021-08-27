@@ -133,15 +133,6 @@
                 <section class="row open-chat">
                     <div class="col-12 pt-4">
 
-                        <!-- USER MESSAGE 
-                        <div class="row justify-content-end">
-                            <div class="col-6 py-2 d-flex justify-content-center align-items-center">
-                                <div class="user-message">
-                                    <p>Ciao</p>
-                                </div>
-                            </div>
-                        </div> --> 
-
                         <!--! CURRENT CONTACT MESSAGES -->
                         <div v-for="(item, index) in contacts[currentIndex].messages">
                             <div class="row" v-bind:class="isReceived(item.status)">
@@ -154,7 +145,6 @@
                             </div>
                         </div>
                        
-
                     </div>
                 </section>
 
