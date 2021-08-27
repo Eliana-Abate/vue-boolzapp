@@ -54,7 +54,7 @@
                     <div class="col-6 d-flex align-items-center">
                         <div class="row align-items-center">
                             <h6 class="profile-name"> {{contacts[currentIndex].name}} </h6>
-                            <p class="last-access">Ultimo accesso oggi alle</p>
+                            <p class="last-access">Ultimo accesso oggi alle 12.15</p>
                         </div> 
                     </div>
 
@@ -143,11 +143,12 @@
                         </div> --> 
 
                         <!--! CURRENT CONTACT MESSAGE -->
-                        <div v-for="(messaggio, index) in contacts[currentIndex].messages">
-                            <div class="row" v-bind:class="isReceived(messaggio.status)">
+                        <div v-for="(item, index) in contacts[currentIndex].messages">
+                            <div class="row" v-bind:class="isReceived(item.status)">
                                 <div class="col-6 py-2 d-flex justify-content-center align-items-center">
                                     <div class="current-contact-message">
-                                        <p> {{messaggio.message}}</p>
+                                        <p> {{item.message}}</p>
+                                        <p></p>
                                     </div>
                                 </div>
                             </div>
