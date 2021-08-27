@@ -49,11 +49,13 @@
                 <!--* CURRENT CONTACT -->
                 <section class="row p-2 bg-header">
                     <div class="col-1 d-flex justify-content-center align-items-center">
-                        <img src="./img/avatar_1.jpg" alt="" class="profile-style">
+                        <div class="d-none" v-bind:class = "isCurrentContact(index)">
+                            <img src="./img/avatar_1.jpg" alt="" class="profile-style">
+                        </div>
                     </div>
 
                     <div class="col-6 d-flex align-items-center">
-                        <div class="row align-items-center">
+                        <div class="row align-items-center d-none">
                             <h6 class="profile-name"> Michele</h6>
                             <p class="last-access">Ultimo accesso oggi alle</p>
                         </div> 
