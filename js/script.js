@@ -7,8 +7,14 @@ const root = new Vue ({
 
     data: {
         currentIndex: 0,
+        newUserMessage: {
+            date: '27/08/2021 17:05:29',
+            message: '',
+            status: 'sent',
+        },
         user: data.user,
         contacts: data.contacts,
+    
     },
 
     methods: {
@@ -24,6 +30,17 @@ const root = new Vue ({
         selectedChat(i) {
             this.currentIndex = i; 
         },
+
+        addUserMessage() {
+            let words = this.newUserMessage.message;
+
+            if (words && words.trim() !== '') {
+                this.newUserMessage.push(words);
+                this.contacts.messages.push(newUserMessage);
+            } 
+            
+            this.newUserMessage.message = '';
+        }
 
     },
 
