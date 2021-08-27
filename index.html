@@ -23,7 +23,7 @@
                 <!--* USER PROFILE -->
                 <section class="row p-2 bg-header">
                     <div class="col-1 d-flex align-items-center">
-                        <img v-bind:src="`./img/avataruser.avatar.jpg`" v-bind:alt="user.avatar" class="profile-style">
+                        <img v-bind:src="`./img/avatar${user.avatar}.jpg`" v-bind:alt="user.avatar" class="profile-style">
                     </div>
 
                     <div class="col-6 d-flex align-items-center">
@@ -110,8 +110,7 @@
                     <section class="col">
                         <div class="row single-chat" v-for = '(item, index) in contacts'>
                             <div class="col-1 d-flex justify-content-center align-items-center">
-                                <!--TODO: RISOLVERE COLLEGAMENTO IMG CON JS-->
-                                <img :src="`./img/avataritem.avatar.jpg`" alt="" class="profile-style"> 
+                                <img :src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="profile-style"> 
                             </div>
                 
                             <div class="col-11 d-flex align-items-center">
