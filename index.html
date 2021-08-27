@@ -147,8 +147,8 @@
                             <div class="row" v-bind:class="isReceived(item.status)">
                                 <div class="col-6 py-2 d-flex justify-content-center align-items-center">
                                     <div class="current-contact-message">
-                                        <p> {{item.message}}</p>
-                                        <p></p>
+                                        <p class="msg-text"> {{item.message}}</p>
+                                        <p class="text-end date-text"> {{item.date}}</p>
                                     </div>
                                 </div>
                             </div>
