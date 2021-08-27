@@ -16,7 +16,11 @@ const root = new Vue ({
 
         isCurrentContact(i) {
             return (this.isCurrentIndex === i) ? 'current' : '';
-        }
+        },
+
+        selectedChat(i) {
+            this.currentIndex = i; 
+        },
 
     },
 

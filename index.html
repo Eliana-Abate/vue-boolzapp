@@ -49,11 +49,11 @@
                 <!--* CURRENT CONTACT -->
                 <section class="row p-2 bg-header">
                     <div class="col-1 d-flex justify-content-center align-items-center">
-                        <img v-for = "(item, index) in data.contacts" src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="d-none profile-style">
+                        <img v-for = "(item, index) in data.contacts" src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="d-none profile-style" v-bind:class = "isCurrentContact(index)">
                     </div>
 
                     <div class="col-6 d-flex align-items-center">
-                        <div class="row align-items-center d-none" v-for = "(item, index) in data.contacts">
+                        <div class="row align-items-center d-none" v-for = "(item, index) in data.contacts" v-bind:class = "isCurrentContact(index)">
                             <h6 class="profile-name"> {{item.name}} </h6>
                             <p class="last-access">Ultimo accesso oggi alle</p>
                         </div> 
@@ -109,7 +109,7 @@
                 <section class="contacts-list row bg-white">
 
                     <section class="col">
-                        <div class="row single-chat" v-for = '(item, index) in contacts'>
+                        <div class="row single-chat" v-for = '(item, index) in contacts' v-bind:class="isCurrentContact(index)" v-on:click="selectedChat(index)">
                             <div class="col-1 d-flex justify-content-center align-items-center">
                                 <img :src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="profile-style"> 
                             </div>
