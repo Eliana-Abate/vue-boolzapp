@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/users.js"></script>
     <script src="./js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
@@ -49,12 +48,12 @@
                 <!--* CURRENT CONTACT -->
                 <section class="row p-2 bg-header">
                     <div class="col-1 d-flex justify-content-center align-items-center">
-                        <img v-for = "(item, index) in data.contacts" src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="d-none profile-style" v-bind:class = "isCurrentContact(index)">
+                        <img :src=" `./img/avatar${contacts[currentIndex].avatar}.jpg` " :alt="contacts[currentIndex].avatar" class="profile-style">
                     </div>
 
                     <div class="col-6 d-flex align-items-center">
-                        <div class="row align-items-center d-none" v-for = "(item, index) in data.contacts" v-bind:class = "isCurrentContact(index)">
-                            <h6 class="profile-name"> {{item.name}} </h6>
+                        <div class="row align-items-center">
+                            <h6 class="profile-name"> {{contacts[currentIndex].name}} </h6>
                             <p class="last-access">Ultimo accesso oggi alle</p>
                         </div> 
                     </div>
@@ -109,7 +108,7 @@
                 <section class="contacts-list row bg-white">
 
                     <section class="col">
-                        <div class="row single-chat" v-for = '(item, index) in contacts' v-bind:class="isCurrentContact(index)" v-on:click="selectedChat(index)">
+                        <div class="row single-chat" v-for = '(item, index) in contacts' v-on:click="selectedChat(index)">
                             <div class="col-1 d-flex justify-content-center align-items-center">
                                 <img :src="`./img/avatar${item.avatar}.jpg`" alt="item.avatar" class="profile-style"> 
                             </div>
@@ -134,41 +133,26 @@
                 <section class="row open-chat">
                     <div class="col-12 pt-4">
 
-                        <!--! USER MESSAGE -->
+                        <!-- USER MESSAGE 
                         <div class="row justify-content-end">
                             <div class="col-6 py-2 d-flex justify-content-center align-items-center">
                                 <div class="user-message">
                                     <p>Ciao</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> --> 
 
                         <!--! CURRENT CONTACT MESSAGE -->
-                        <div class="row justify-content-start">
-                            <div class="col-6 py-2 d-flex justify-content-center align-items-center">
-                                <div class="current-contact-message">
-                                    <p>Ciao</p>
+                        <div v-for="(messaggio, index) in contacts[currentIndex].messages">
+                            <div class="row" v-bind:class="isReceived(messaggio.status)">
+                                <div class="col-6 py-2 d-flex justify-content-center align-items-center">
+                                    <div class="current-contact-message">
+                                        <p> {{messaggio.message}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                         <!--! USER MESSAGE -->
-                         <div class="row justify-content-end">
-                            <div class="col-6 py-2 d-flex justify-content-center align-items-center">
-                                <div class="user-message">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores inventore error nemo hic ipsum deleniti vero officiis tempore. Ratione fugiat ipsa laboriosam voluptas natus modi fuga dignissimos corrupti tempora repellendus.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--! CURRENT CONTACT MESSAGE -->
-                        <div class="row justify-content-start">
-                            <div class="col-6 py-2 d-flex justify-content-center align-items-center">
-                                <div class="current-contact-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui illum asperiores quibusdam, commodi, reiciendis minus fuga veritatis iste nesciunt hic architecto ducimus odit. Laboriosam nulla velit, repudiandae magnam porro veritatis!</p>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                     </div>
                 </section>

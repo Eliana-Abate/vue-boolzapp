@@ -7,15 +7,14 @@ const root = new Vue ({
 
     data: {
         currentIndex: 0,
-        user: user,
-        contacts: contacts,
-        data: data,
+        user: data.user,
+        contacts: data.contacts,
     },
 
     methods: {
 
-        isCurrentContact(i) {
-            return (this.isCurrentIndex === i) ? 'current' : '';
+        isReceived(status) {
+            return (status === 'received') ? 'justify-content-start' : 'justify-content-end';
         },
 
         selectedChat(i) {
