@@ -14,7 +14,9 @@ const root = new Vue ({
 
     methods: {
 
-      
+        isCurrentContact(i) {
+            return (this.isCurrentIndex === i) ? 'current' : '';
+        }
 
     },
 
