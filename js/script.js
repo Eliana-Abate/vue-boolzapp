@@ -11,7 +11,6 @@ const root = new Vue ({
         searchChat: '',
         user: data.user,
         contacts: data.contacts,
-    
     },
 
     methods: {
@@ -63,6 +62,7 @@ const root = new Vue ({
             }, 1000);
         },
 
+
         //* MODALITA' 2: creo funzione che costruisce l'oggetto-messaggio sia per il contatto sia per l'utente; poi sopra richiamo la funzione passando i paramentri/
         buildMessage(text, status) {
             const newMessage = {
@@ -73,6 +73,15 @@ const root = new Vue ({
 
             this.contacts[this.currentIndex].messages.push(newMessage);
         },
+
+
+        showChat(text) {
+           /* const searchedContact = {
+                name: text,
+            }*/
+            const filter = this.searchChat.trim();
+            return text.includes(filter);
+        }
 
     },
 
