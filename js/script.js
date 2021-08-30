@@ -76,11 +76,14 @@ const root = new Vue ({
 
 
         showChat(text) {
-           /* const searchedContact = {
-                name: text,
-            }*/
-            const filter = this.searchChat.trim();
-            return text.includes(filter);
+
+            let word = this.searchChat.trim();
+            if (word === '') {
+                return true;
+            }
+
+            const filter = word.toUpperCase();
+            return text.toUpperCase().includes(filter);
         }
 
     },
