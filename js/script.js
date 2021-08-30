@@ -28,30 +28,50 @@ const root = new Vue ({
         },
 
         addUserMessage() {
-            let newUserMessage = {
+            /* MODALITA' 1
+            const newUserMessage = {
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.newText,
                 status: 'sent',
-            };
+            }; 
 
             if (this.newText && this.newText.trim() !== '') {
                 this.contacts[this.currentIndex].messages.push(newUserMessage);
-            } 
+            } */
+
+            //* MODALITA' 2/
+            this.buildMessage(this.newText, 'sent');
 
             this.newText = '';
+            
 
             setTimeout(() => {
+                /* MODALITA' 1
                 const newContactMessage = {
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message: 'ok',
                     status: 'received',
-                }
+                };
 
-                this.contacts[this.currentIndex].messages.push(newContactMessage);
+                this.contacts[this.currentIndex].messages.push(newContactMessage); */
+
+                //* MODALITA' 2/
+                this.buildMessage('ok', 'received');
 
 
             }, 1000);
-        }
+        },
+
+        //* MODALITA' 2: creo funzione che costruisce l'oggetto-messaggio sia per il contatto sia per l'utente; poi sopra richiamo la funzione passando i paramentri/
+        buildMessage(text, status) {
+            const newMessage = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: text,
+                status: status,
+            };
+
+            this.contacts[this.currentIndex].messages.push(newMessage);
+        },
 
     },
 
