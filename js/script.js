@@ -39,6 +39,18 @@ const root = new Vue ({
             } 
 
             this.newText = '';
+
+            setTimeout(() => {
+                const newContactMessage = {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    message: 'ok',
+                    status: 'received',
+                }
+
+                this.contacts[this.currentIndex].messages.push(newContactMessage);
+
+
+            }, 1000);
         }
 
     },
