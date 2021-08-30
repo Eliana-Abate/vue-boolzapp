@@ -8,6 +8,7 @@ const root = new Vue ({
     data: {
         currentIndex: 0,
         newText: '',
+        searchChat: '',
         user: data.user,
         contacts: data.contacts,
     
@@ -43,7 +44,7 @@ const root = new Vue ({
             this.buildMessage(this.newText, 'sent');
 
             this.newText = '';
-            
+
 
             setTimeout(() => {
                 /* MODALITA' 1
