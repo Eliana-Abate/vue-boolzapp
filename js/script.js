@@ -29,7 +29,7 @@ const root = new Vue ({
 
         addUserMessage() {
             let newUserMessage = {
-                date: '27/08/2021 17:05:29',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.newText,
                 status: 'sent',
             };
