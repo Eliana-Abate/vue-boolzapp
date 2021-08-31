@@ -161,6 +161,10 @@ main {
         color: white;
     }
 
+    .hidden {
+        display: none;
+    }
+
 
 
 

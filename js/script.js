@@ -9,6 +9,7 @@ const root = new Vue ({
         currentIndex: 0,
         newText: '',
         searchChat: '',
+        currentMessage: 0,
         user: data.user,
         contacts: data.contacts,
     },
@@ -84,8 +85,15 @@ const root = new Vue ({
 
             const filter = word.toUpperCase();
             return text.toUpperCase().includes(filter);
-        }
+        }, 
 
+       openMenu(i){
+           this.currentMessage = i;
+       },
+
+       isSelectedMessage(index) {
+        return (index === this.currentMessage) ? '' : 'hidden';
+    },
     },
 
 });
