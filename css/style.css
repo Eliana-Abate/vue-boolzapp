@@ -139,6 +139,29 @@ main {
     }
 
 
+    #menu-action {
+        padding: 8px 12px;
+        border-radius: 10px;
+        background-color: #eaeaea;
+        border: 1px solid lightgray;
+        font-size: 15px;
+        position: absolute;
+        top: 100%;
+        left: 55%;
+        z-index: 1;  
+    }
+
+    .button-style {
+        border: 0px;
+        background-color: transparent;
+    }
+
+    .button-style:hover {
+        background-color: #128C7E;
+        color: white;
+    }
+
+
 
 
 
