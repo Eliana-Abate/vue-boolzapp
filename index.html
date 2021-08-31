@@ -138,8 +138,8 @@
                         <!--! CURRENT CONTACT MESSAGES -->
                         <div v-for="(item, index) in contacts[currentIndex].messages">
                             <div class="row" v-bind:class="isReceived(item.status)">
-                                <div class="col-6 py-2 d-flex justify-content-center align-items-center position-relative" v-on:click="openMenu(index)">
-                                    <div v-bind:class="isContactMessage(item.status)">
+                                <div class="col-6 py-2 d-flex justify-content-center align-items-center position-relative">
+                                    <div v-bind:class="isContactMessage(item.status)" v-on:click="openMenu(index)">
                                         <p class="msg-text"> {{item.message}}</p>
                                         <p class="text-end date-text"> {{item.date}}</p>
                                     </div>

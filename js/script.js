@@ -87,13 +87,14 @@ const root = new Vue ({
             return text.toUpperCase().includes(filter);
         }, 
 
-       openMenu(i){
+        openMenu(i){
            this.currentMessage = i;
        },
 
-       isSelectedMessage(index) {
+        isSelectedMessage(index) {
         return (index === this.currentMessage) ? '' : 'hidden';
-    },
+       },
+       
     },
 
 });
