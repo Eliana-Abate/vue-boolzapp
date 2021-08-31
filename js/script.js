@@ -9,7 +9,7 @@ const root = new Vue ({
         currentIndex: 0,
         newText: '',
         searchChat: '',
-        currentMessage: 0,
+        currentMessage: 2,
         user: data.user,
         contacts: data.contacts,
     },
@@ -92,9 +92,9 @@ const root = new Vue ({
        },
 
         isSelectedMessage(index) {
-        return (index === this.currentMessage) ? '' : 'hidden';
+        return ((parseInt(index) == parseInt(this.currentMessage)) ? '' : 'hidden');
        },
-       
+
     },
 
 });

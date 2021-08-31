@@ -144,7 +144,8 @@
                                         <p class="text-end date-text"> {{item.date}}</p>
                                     </div>
 
-                                    <div id="menu-action" class="d-flex flex-column align-items-center justify-content-center" v-if="openMenu(index)" v-bind:class="isSelectedMessage(index)">
+                                    <div id="menu-action" class="d-flex flex-column align-items-center justify-content-center"  v-bind:class="isSelectedMessage(index)">
+                                        {{index}}
                                         <button class="button-style">Delete</button>
                                             
                                         <button class="button-style">Forward</button>     
