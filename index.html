@@ -139,17 +139,12 @@
                         <div v-for="(item, index) in contacts[currentIndex].messages">
                             <div class="row" v-bind:class="isReceived(item.status)">
                                 <div class="col-6 py-2 d-flex justify-content-center align-items-center position-relative">
-                                    <div v-bind:class="isContactMessage(item.status)" v-on:click="openMenu(index)">
+                                    <div v-bind:class="isContactMessage(item.status)">
                                         <p class="msg-text"> {{item.message}}</p>
                                         <p class="text-end date-text"> {{item.date}}</p>
                                     </div>
 
-                                    <div id="menu-action" class="d-flex flex-column align-items-center justify-content-center"  v-bind:class="isSelectedMessage(index)">
-                                        {{index}}
-                                        <button class="button-style">Delete</button>
-                                            
-                                        <button class="button-style">Forward</button>     
-                                    </div>
+                                
                                 </div> 
                             </div> 
                         </div>
