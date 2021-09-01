@@ -9,7 +9,6 @@ const root = new Vue ({
         currentIndex: 0,
         newText: '',
         searchChat: '',
-        currentMessage: 2,
         user: data.user,
         contacts: data.contacts,
     },
@@ -87,14 +86,7 @@ const root = new Vue ({
             return text.toUpperCase().includes(filter);
         }, 
 
-        openMenu(i){
-           this.currentMessage = i;
-       },
-
-        isSelectedMessage(index) {
-        return ((parseInt(index) == parseInt(this.currentMessage)) ? '' : 'hidden');
-       },
-
+        
     },
 
 });
